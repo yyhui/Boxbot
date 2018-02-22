@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+    font-size: 12px;
+}
+
+.clearfix::before,
+.clearfix::after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    width: 0;
+    height: 0;
+
+    content: ".";
+}
+
+#container {
+    float: left;
+
+    position: relative;
+
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.col-num,
+.row-num,
+.cell {
+    float: left;
+
+    width: 20px;
+    height: 20px;
+
+    line-height: 20px;
+}
+
+.col-num {
+    text-align: center;
+}
+
+.row-num {
+    padding-right: 12px;
+
+    text-align: right;
+}
+
+.cell {
+    border-right: 1px solid #bdc3c7;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.cell[data-type="wall"] {
+    background: #ddd;
+}
+
+.col-nums:first-child .col-num {
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.col-nums .col-num:first-child {
+    border: 0;
+}
+
+.row-num:first-child {
+    border-right: 1px solid #bdc3c7;
+}
+
+.square {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background: #f00;
+}
+
+.direction {
+    height: 5px;
+
+    background: #00f;
+}
+
+#side {
+    float: left;
+
+    padding-top: 50px;
+    width: 345px;
+}
+
+button {
+    display: block;
+
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+}
+
+button,
+textarea {
+    outline: 0;
+}
+
+.commands-wrapper {
+    overflow: hidden;
+
+    position: relative;
+
+    margin-top: 5px;
+
+    line-height: 20px;
+
+    background: #2c3e50;
+}
+
+#commands {
+    float: left;
+
+    margin-left: 45px;
+    border: 0;
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+
+    color: #fff;
+    background: rgb(52, 73, 94);
+
+    resize: none;
+}
+
+.line-nums,
+#commands {
+    line-height: 20px;
+}
+
+.line-nums {
+    position: absolute;
+
+    padding: 10px 10px 10px 0;
+    width: 45px;
+
+    text-align: right;
+
+    color: #fff;
+}
+
+.success {
+    background: #27ae60;
+}
+
+.error {
+    background: #f39c12;
+}
